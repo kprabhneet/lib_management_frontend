@@ -16,8 +16,8 @@ const Dashboard = () => {
       <h1>Dashboard</h1>
 
       <div className="stats">
-        <div className="card">📚 Total Books: {books.length}</div>
-        <div className="card">📖 Borrowed: {borrowed.length}</div>
+        <div className="card"> Total Books: {books.length}</div>
+        <div className="card">📖 Books Borrowed: {borrowed.length}</div>
       </div>
     </div>
   );
