@@ -1,0 +1,115 @@
+/* PAGE */
+.borrowed-page {
+  padding: 40px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* TITLE */
+.borrowed-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #0f172a;
+}
+
+/* GRID */
+.borrowed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* CARD */
+.borrow-card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: 0.25s ease;
+  position: relative;
+}
+
+.borrow-card:hover {
+  transform: translateY(-6px);
+}
+
+/* OVERDUE BORDER (SUBTLE) */
+.borrow-card.overdue {
+  border-left: 5px solid #ef4444;
+}
+
+/* BOOK NAME */
+.book-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+/* USER */
+.user-name {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* DUE DATE */
+.due-date {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #334155;
+}
+
+/* STATUS BADGE */
+.status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status.late {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* FINE */
+.fine {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #dc2626;
+}
+
+/* BUTTON */
+.return-btn {
+  margin-top: 18px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.return-btn:hover {
+  background: #1e293b;
+}
+
+/* EMPTY */
+.empty-text {
+  text-align: center;
+  color: #64748b;
+  font-size: 16px;
+}
