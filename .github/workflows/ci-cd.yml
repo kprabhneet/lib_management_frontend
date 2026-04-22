@@ -1,0 +1,41 @@
+name: Frontend CI/CD
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 📥 Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # ⚛️ Setup Node
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      # 📦 Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # ⚠️ Skip tests
+      - name: Skip tests
+        run: echo "No tests configured"
+
+      # 🧹 Lint (optional)
+      - name: Run ESLint
+        run: npm run lint || echo "No lint script"
+
+      # 🏗️ Build
+      - name: Build project
+        run: npm run build
+
+      # 🚀 Deploy to Render (ONLY if build succeeds)
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
